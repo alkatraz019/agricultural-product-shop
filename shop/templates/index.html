@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% block title %}Regimen Foods{% endblock title %}
+
+{% block style %}
+{% load static %}
+.c1{
+padding-top:10vh;
+}
+.c11{
+background: #00d9c0;
+
+}
+.c12{
+background: #e574bc;
+
+}
+.c13{
+background: #ff4365;
+
+}
+.ff1{
+background: #272727
+}
+.newsletter{
+background:#06d6a0
+}
+{% comment %} img{
+height:75vw;
+width:75vw;
+object-fit: scale-down;
+} {% endcomment %}
+{% endblock style %}
+{% block body %}
+{% load static %}
+{% comment %} slide1 {% endcomment %}
+<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-inner">
+        <div class="carousel-item active c1 c11">
+            <div class="m-auto w-50"><img src="{% static 'shop/fruits1x.png' %}" class="d-block w-100" alt="fruits">
+            </div>
+            <h1 class="text-center">Healthy Fruits</h1>
+
+        </div>
+        <div class="carousel-item c1 c12">
+            <div class="m-auto w-50"><img src="{% static 'shop/saladx.png' %}" class="d-block w-100" alt="salad"></div>
+            <h1 class="text-center">Safe Diets</h1>
+        </div>
+        <div class="carousel-item c1 c13">
+            <div class="m-auto w-50"><img src="{% static 'shop/veggiesx.png' %}" class="d-block w-100" alt="veggies">
+            </div>
+            <h1 class="text-center">Best Veggies</h1>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% comment %} About shop {% endcomment %}
+<div class="p-5 " id="about">
+    <h1 class="text-center">About our Shop</h1>
+    <p align="justify" class="p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore laudantium,
+        molestias at voluptatum placeat itaque sunt necessitatibus accusamus dolorum, quasi expedita voluptatem numquam,
+        quaerat vel a. Cum, odio. In ipsa quidem accusamus.</p>
+</div>
+{% comment %} Featured product {% endcomment %}
+<div id="services"></div>
+<div id="carouselExample" class="carousel slide ff1">
+    <h1 class="text-light text-center p-5">Featured items</h1>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="d-flex justify-content-around">
+                <div class="w-25"><img src="{% static 'shop/pomegranate1.png' %}" class="d-block w-100" alt="veggies">
+                    <h2 class="text-center text-light">Pomegranate</h2>
+                </div>
+                <div class="w-25"><img src="{% static 'shop/strawberry1x.png' %}" class="d-block w-100" alt="veggies">
+                    <h2 class="text-center text-light">Strawberries</h2>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-around">
+                <div class="w-25"><img src="{% static 'shop/orange1x.png' %}" class="d-block w-100" alt="veggies"><h2 class="text-center text-light">Orange</h2></div>
+                <div class="w-25"><img src="{% static 'shop/banana2x.png' %}" class="d-block w-100" alt="veggies"><h2 class="text-center text-light">Banana</h2></div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex justify-content-around">
+                <div class="w-25"><img src="{% static 'shop/lemon2x.png' %}" class="d-block w-100" alt="veggies"><h2 class="text-center text-light">Lemon</h2></div>
+                <div class="w-25"><img src="{% static 'shop/grape1x.png' %}" class="d-block w-100" alt="veggies"><h2 class="text-center text-light">Grape</h2></div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{% comment %} Newsletter {% endcomment %}
+
+<div class="newsletter p-5" id="contactus">
+    <h3 class="text-center">Stay in touch</h3>
+    <div class="m-auto p-4" style="width:max-content">
+        <form action="#" method="post">
+            <input class="form-control form-control-lg" type="text" placeholder="Your e-mail address"
+                aria-label=".form-control-lg example">
+            <div class="m-auto p-4" style="width:max-content">
+                <button class="btn btn-primary m-auto"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                    Send</button></div>
+        </form>
+    </div>
+</div>
+
+{% comment %} contact {% endcomment %}
+
+
+<div class="p-5">
+    <h3 class="heading">Contact us</h3>
+
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+    <p>example address</p>
+    <i class="fa fa-phone" aria-hidden="true"></i>
+    <p>Tel : +(91) 498 5563 XXXX , +(91) 498 5563 XXXX</p>
+    <p>Fax : +(91) 498 5563 XXXX</p>
+    <p>Contact Name : ABC</p>
+    <i class="fa fa-envelope" aria-hidden="true"></i>
+    <p><a href="mailto:info@example.com">info@examplemail.com</a></p>
+</div>
+<div class="p-5" style="max-width: 400px;">
+    <h4>Contact Form</h4>
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">message</label>
+            <input type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+
+
+{% endblock body %}

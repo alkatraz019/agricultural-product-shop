@@ -1,0 +1,113 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock title %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8188c57fd4.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="{% static 'shop/logo.png' %}">
+
+  <style>{% block style %}{% endblock style %}</style>
+</head>
+
+<body>
+  {% comment %} Navbar {% endcomment %}
+
+  <nav class="navbar navbar-expand-lg position-absolute w-100" style="z-index:400;" id="home">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=""><img src="{% static 'shop/logo.png' %}" height="40px" width="40px" alt=""></a>
+      <a class="navbar-brand" href="">Regimen Foods</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactus">Contact us</a>
+          </li>
+          
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success text-dark" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  {% block body %}{% endblock body %}
+  {% comment %} footer {% endcomment %}
+  {% load static %}
+  <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/"
+            aria-label="Bootstrap">
+            <span><img src="{% static 'shop/logo.png' %}" height="32px" width="32px" alt=""></span>
+            <span class="fs-5 p-1"> Regimen Foods</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="mb-2">Designed and built with all the love in the world by the virtual intern of microsoft with the help of knowledge gained from the intership.</li>
+            
+            <li class="mb-2">Currently v1.0.0</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home">Home</a></li>
+            <li class="mb-2"><a href="#about">About</a></li>
+            <li class="mb-2"><a href="#services">Services</a></li>
+          
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Getting started</a></li>
+            <li class="mb-2"><a href="#">Starter template</a></li>
+            <li class="mb-2"><a href="#">Webpack</a></li>
+
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Technologies used</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="">Bootstrap 5</a></li>
+            <li class="mb-2"><a href="">Django</a></li>
+            <li class="mb-2"><a href="">Fonts awesome</a></li>
+
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Get in touch</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://github.com/alkatraz019">Github</a></li>
+            <li class="mb-2"><a href="mailto:surajm019@gmail.com">mail</a></li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
